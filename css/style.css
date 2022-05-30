@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@font-face{
+    font-family: 'TankTrouble';
+    src:url('../media/fonts/TankTrouble.eot');
+    src:url('../media/fonts/TankTrouble.eot?#iefix') format('embedded-opentype'),
+    url('../media/fonts/TankTrouble.woff2') format('woff2'),
+    url('../media/fonts/TankTrouble.woff') format('woff'),
+    url('../media/fonts/TankTrouble.ttf')  format('truetype'),
+    url('../media/fonts/TankTrouble.svg') format('svg');;
+}
+
+/* 
+yellow: #ddb135 
+purple: #6e25a4
+*/
+
+:root {
+    --yellow: #f49880; 
+    --purple: #000;
+    --first-bg: #f49880;
+    --first-title: #000;
+    --first-text: black;
+    --second-bg: #01bfbf;
+    --second-title: white;
+    --second-text: white;
+}
+
+.divpad img { 
+    filter:drop-shadow(2px 2px 6px #0000008a);
+}
+
+.pback,.yback,.blackback {
+    box-shadow:0px 0px 40px #0000008a;
+}
+
+/* Alignments */
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.indent {
+    text-indent: 50px;
+}
+
+/* backgrounds */
+.yback {
+    background-color: var(--first-bg);
+}
+
+.yback h1 {
+    color: var(--first-title);
+}
+
+.yback h2 {
+    color: var(--first-title);
+}
+
+.yback p {
+    color: var(--first-text);
+}
+
+.yback li {
+    color: var(--first-text);
+}
+
+.yback a {
+    color: var(--first-title);
+}
+
+.yback a:visited {
+    color: var(--first-title);
+}
+
+.yback a:hover {
+    color: var(--first-title);
+}
+
+.pback {
+    background-color: var(--second-bg);
+}
+
+.pback h1 {
+    color: var(--second-title);
+}
+
+.pback h2 {
+    color: var(--second-title);
+}
+
+.pback p {
+    color: var(--second-text);
+}
+
+.pback li {
+    color: var(--second-text);
+}
+
+.pback a {
+    color: var(--second-title);
+}
+
+.pback a:visited {
+    color: var(--second-title);
+}
+
+.pback a:hover {
+    color: var(--second-title);
+}
+
+.whiteback {
+    background-color: white;
+}
+
+.whiteback h1 {
+    color: var(--purple);
+}
+
+.whiteback h2 {
+    color: var(--purple);
+}
+
+.whiteback p {
+    color: black;
+}
+
+.whiteback li {
+    color: black;
+}
+
+.whiteback a {
+    color: var(--purple);
+}
+
+.whiteback a:visited {
+    color: var(--purple);
+}
+
+.whiteback a:hover {
+    color: var(--yellow);
+}
+
+.blackback {
+    background-color: black;
+}
+
+.blackback h1 {
+    color: var(--yellow);
+}
+
+.blackback h2 {
+    color: var(--yellow);
+}
+
+.blackback p {
+    color: white;
+}
+
+.blackbacl li {
+    color: white;
+}
+
+.blackback a {
+    color: var(--yellow);
+}
+
+.blackback a:visited {
+    color: var(--yellow)
+}
+
+.blackback a:hover {
+    color: var(--purple);
+}
+
+/* Padding and margins */
+.textdivmargin {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.textpad {
+    padding: 0 20px 0 20px;
+}
+
+.nopad {
+    padding: 0 0 0 0;
+}
+
+.padded {
+    padding: 15px 15px 15px 15px;
+}
+
+/* Tag items */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.imgfull {
+    width: 100%;
+}
+
+nav {
+    background: black;
+}
+
+div {
+    display: block;
+    overflow: hidden;
+    padding: none;
+}
+
+a {
+    font-family: 'TankTrouble', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:visited:hover {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+p {
+    display: block;
+    font-family: 'Lexend Deca', sans-serif !important;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+li {
+    font-family: 'Lexend Deca', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'TankTrouble', sans-serif;
+    font-size: 36px;
+}
+
+h2 {
+    font-family: 'TankTrouble', sans-serif;
+    font-size: 20px;
+}
+
+.ttfont {
+    font-family: 'TankTrouble', sans-serif !important;
+}
+
+/* Navigation Bar */
+.nonstick {
+    text-align: center;
+    object-fit: contain;
+    width: 100%;
+}
+
+.logo {
+    width: 100%;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 5px 0px 5px 0px;
+    line-height: 1px;
+}
+
+.nav-link {
+    vertical-align: 50%;
+    padding: 10px 10px 10px 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--first-bg) ;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--second-bg);
+}
+
+.rbtn {
+    background-color: var(--first-bg) ;
+    color: #000 !important;
+    border: 2px solid #000;
+}
+
+.rbtn:hover {
+    background-color: var(--second-bg);
+    color: #fff !important;
+    border: 2px solid #fff;
+}
+
+
+/* Content */
+.main {
+    margin: 0px 0px 0px 0px;
+    word-wrap: break-word;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.divpad {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.toppad {
+    padding-top: 25px;
+}
+
+.botpad {
+    padding-bottom: 25px;
+}
+
+hr {
+    background-color: black;
+    width: 120%;
+    height: 12px;
+    border-top: 1px solid black;
+    margin: 0px 0px 0px 0px;
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.fill img {
+    object-fit: cover;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Footer items */
+.foot {
+    line-height: 1.5;
+    border-top: 15px solid black;
+    word-wrap: break-word;
+}
+
+.fbtn {
+    background-color: var(--second-bg);
+    color: #fff !important;
+    border: 2px solid #fff;
+}
+
+.fbtn:hover {
+    background-color: var(--first-bg) ;
+    color: #000 !important;
+    border: 2px solid #000;
+}
+
+/* Buttons */
+.yback .btn {
+    background-color: var(--second-bg);
+    color: #fff !important;
+    border: 2px solid #fff;
+}
+
+.yback .btn:hover {
+    background-color: var(--first-bg) ;
+    color: #000!important;
+    border: 2px solid #000;
+}
+
+.pback .btn {
+    background-color: var(--first-bg) ;
+    color: #000 !important;
+    border: 2px solid #000;
+}
+
+.pback .btn:hover {
+    background-color: var(--second-bg);
+    color: #fff !important;
+    border: 2px solid #fff;
+}
+
+/* Manual */
+.purple {
+    color: var(--second-bg) !important;
+}
+
+.yellow {
+    color: var(--first-bg)  !important;
+}
+
+.white {
+    color: white !important;
+}
+
+.black {
+    color: black !important; 
+}
+
+/* Image inside image */
+.weaponunder {
+    position: relative;
+    text-align: center;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+/* Rotation code */
+.rotate {
+    animation: rotation 12s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
