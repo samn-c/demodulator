@@ -1,28 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
-@font-face{
-    font-family: 'TankTrouble';
-    src:url('../media/fonts/TankTrouble.eot');
-    src:url('../media/fonts/TankTrouble.eot?#iefix') format('embedded-opentype'),
-    url('../media/fonts/TankTrouble.woff2') format('woff2'),
-    url('../media/fonts/TankTrouble.woff') format('woff'),
-    url('../media/fonts/TankTrouble.ttf')  format('truetype'),
-    url('../media/fonts/TankTrouble.svg') format('svg');;
-}
-
-/* 
-yellow: #ddb135 
-purple: #6e25a4
-*/
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Gotu&display=swap');
 
 :root {
-    --yellow: #f49880; 
-    --purple: #000;
-    --first-bg: #f49880;
+    --c-one: #EF6461;
+    --c-two: #1E88C7;
+
+    --c-primary: var(--c-one); 
+    --c-secondary: #000;
+    --first-bg: var(--c-one);
     --first-title: #000;
     --first-text: black;
-    --second-bg: #01bfbf;
+    --second-bg: var(--c-two);
     --second-title: white;
     --second-text: white;
+    /* --c-primary: #fff; 
+    --c-secondary: #000;
+    --first-bg: #fff;
+    --first-title: #000;
+    --first-text: black;
+    --second-bg: #000;
+    --second-title: white;
+    --second-text: white; */
+    
+
+    --title-font: 'Crimson Text', serif;
+    --body-font: 'Gotu', sans-serif;
 }
 
 .contain {
@@ -35,7 +36,7 @@ purple: #6e25a4
     filter:drop-shadow(2px 2px 6px #0000008a);
 }
 
-.pback,.yback,.blackback {
+.sback,.pback,.blackback {
     box-shadow:0px 0px 40px #0000008a;
 }
 
@@ -62,67 +63,67 @@ purple: #6e25a4
 }
 
 /* backgrounds */
-.yback {
+.pback {
     background-color: var(--first-bg);
 }
 
-.yback h1 {
-    color: var(--first-title);
-}
-
-.yback h2 {
-    color: var(--first-title);
-}
-
-.yback p {
-    color: var(--first-text);
-}
-
-.yback li {
-    color: var(--first-text);
-}
-
-.yback a {
-    color: var(--first-title);
-}
-
-.yback a:visited {
-    color: var(--first-title);
-}
-
-.yback a:hover {
-    color: var(--first-title);
-}
-
-.pback {
-    background-color: var(--second-bg);
-}
-
 .pback h1 {
-    color: var(--second-title);
+    color: var(--first-title);
 }
 
 .pback h2 {
-    color: var(--second-title);
+    color: var(--first-title);
 }
 
 .pback p {
-    color: var(--second-text);
+    color: var(--first-text);
 }
 
 .pback li {
-    color: var(--second-text);
+    color: var(--first-text);
 }
 
 .pback a {
-    color: var(--second-title);
+    color: var(--first-title);
 }
 
 .pback a:visited {
-    color: var(--second-title);
+    color: var(--first-title);
 }
 
 .pback a:hover {
+    color: var(--first-title);
+}
+
+.sback {
+    background-color: var(--second-bg);
+}
+
+.sback h1 {
+    color: var(--second-title);
+}
+
+.sback h2 {
+    color: var(--second-title);
+}
+
+.sback p {
+    color: var(--second-text);
+}
+
+.sback li {
+    color: var(--second-text);
+}
+
+.sback a {
+    color: var(--second-title);
+}
+
+.sback a:visited {
+    color: var(--second-title);
+}
+
+.sback a:hover {
     color: var(--second-title);
 }
 
@@ -131,11 +132,11 @@ purple: #6e25a4
 }
 
 .whiteback h1 {
-    color: var(--purple);
+    color: var(--c-secondary);
 }
 
 .whiteback h2 {
-    color: var(--purple);
+    color: var(--c-secondary);
 }
 
 .whiteback p {
@@ -147,15 +148,15 @@ purple: #6e25a4
 }
 
 .whiteback a {
-    color: var(--purple);
+    color: var(--c-secondary);
 }
 
 .whiteback a:visited {
-    color: var(--purple);
+    color: var(--c-secondary);
 }
 
 .whiteback a:hover {
-    color: var(--yellow);
+    color: var(--c-primary);
 }
 
 .blackback {
@@ -163,11 +164,11 @@ purple: #6e25a4
 }
 
 .blackback h1 {
-    color: var(--yellow);
+    color: var(--c-primary);
 }
 
 .blackback h2 {
-    color: var(--yellow);
+    color: var(--c-primary);
 }
 
 .blackback p {
@@ -179,15 +180,15 @@ purple: #6e25a4
 }
 
 .blackback a {
-    color: var(--yellow);
+    color: var(--c-primary);
 }
 
 .blackback a:visited {
-    color: var(--yellow)
+    color: var(--c-primary)
 }
 
 .blackback a:hover {
-    color: var(--purple);
+    color: var(--c-secondary);
 }
 
 /* Padding and margins */
@@ -231,46 +232,42 @@ div {
 }
 
 a {
-    font-family: 'TankTrouble', sans-serif;
+    font-family: var(--title-font);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 a:hover {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 a:visited:hover {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 p {
     display: block;
-    font-family: 'Lexend Deca', sans-serif !important;
+    font-family: var(--body-font);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 li {
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: var(--body-font);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 h1 {
-    font-family: 'TankTrouble', sans-serif;
-    font-size: 36px;
+    font-family: var(--title-font);
+    font-size: 50px;
 }
 
 h2 {
-    font-family: 'TankTrouble', sans-serif;
-    font-size: 20px;
-}
-
-.ttfont {
-    font-family: 'TankTrouble', sans-serif !important;
+    font-family: var(--title-font);
+    font-size: 30px;
 }
 
 /* Navigation Bar */
@@ -384,25 +381,25 @@ hr {
 }
 
 /* Buttons */
-.yback .btn {
+.pback .btn {
     background-color: var(--second-bg);
     color: #fff !important;
     border: 2px solid #fff;
 }
 
-.yback .btn:hover {
+.pback .btn:hover {
     background-color: var(--first-bg) ;
     color: #000!important;
     border: 2px solid #000;
 }
 
-.pback .btn {
+.sback .btn {
     background-color: var(--first-bg) ;
     color: #000 !important;
     border: 2px solid #000;
 }
 
-.pback .btn:hover {
+.sback .btn:hover {
     background-color: var(--second-bg);
     color: #fff !important;
     border: 2px solid #fff;
