@@ -406,11 +406,11 @@ hr {
 }
 
 /* Manual */
-.purple {
+.secondary {
     color: var(--second-bg) !important;
 }
 
-.yellow {
+.primary {
     color: var(--first-bg)  !important;
 }
 
