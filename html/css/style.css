@@ -5,7 +5,7 @@
     --c-two: #1E88C7;
 
     --c-primary: var(--c-one); 
-    --c-secondary: #000;
+    --c-secondary:  var(--c-two);
     --first-bg: var(--c-one);
     --first-title: #000;
     --first-text: black;
@@ -252,6 +252,8 @@ p {
     font-family: var(--body-font);
     text-decoration: none;
     font-size: 17px;
+    padding: 0;
+    margin: 0;
 }
 
 li {
@@ -301,19 +303,6 @@ h2 {
     color: var(--second-bg);
 }
 
-.rbtn {
-    background-color: var(--first-bg) ;
-    color: #000 !important;
-    border: 2px solid #000;
-}
-
-.rbtn:hover {
-    background-color: var(--second-bg);
-    color: #fff !important;
-    border: 2px solid #fff;
-}
-
-
 /* Content */
 .main {
     margin: 0px 0px 0px 0px;
@@ -361,48 +350,68 @@ hr {
     min-height: 100%;
 }
 
-/* Footer items */
+/* Footer */
 .foot {
     line-height: 1.5;
     border-top: 15px solid black;
     word-wrap: break-word;
 }
 
-.fbtn {
-    background-color: var(--second-bg);
-    color: #fff !important;
-    border: 2px solid #fff;
-}
-
-.fbtn:hover {
-    background-color: var(--first-bg) ;
-    color: #000 !important;
-    border: 2px solid #000;
-}
-
 /* Buttons */
+.btn {
+    font-size: 20px;
+}
+
 .pback .btn {
     background-color: var(--second-bg);
     color: #fff !important;
     border: 2px solid #fff;
+    font-size: 20px;
 }
 
 .pback .btn:hover {
     background-color: var(--first-bg) ;
     color: #000!important;
     border: 2px solid #000;
+    font-size: 20px;
 }
 
 .sback .btn {
     background-color: var(--first-bg) ;
     color: #000 !important;
     border: 2px solid #000;
+    font-size: 20px;
 }
 
 .sback .btn:hover {
     background-color: var(--second-bg);
     color: #fff !important;
     border: 2px solid #fff;
+    font-size: 20px;
+}
+
+.pbtn {
+    background-color: var(--first-bg) ;
+    color: #000 !important;
+    border: 2px solid #000;
+}
+
+.pbtn:hover {
+    background-color: var(--second-bg);
+    color: #fff !important;
+    border: 2px solid #fff;
+}
+
+.sbtn {
+    background-color: var(--second-bg);
+    color: #fff !important;
+    border: 2px solid #fff;
+}
+
+.sbtn:hover {
+    background-color: var(--first-bg) ;
+    color: #000 !important;
+    border: 2px solid #000;
 }
 
 /* Manual */
@@ -420,24 +429,6 @@ hr {
 
 .black {
     color: black !important; 
-}
-
-/* Image inside image */
-.weaponunder {
-    position: relative;
-    text-align: center;
-}
-
-.bottom-right {
-    position: absolute;
-    bottom: 0%;
-    right: 0%;
-}
-
-.bottom-left {
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
 }
 
 /* Rotation code */
