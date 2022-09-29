@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>
+            Prototype - Demodulator and Audio Amplifier
+        </title>
+        
+        <link rel="icon" href="media/icons/wave.png">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta content="Demodulator and Audio Amplifier Design" property="og:title">
+        <meta content="ECE295: Hardware Design and Communication Course Project @ UofT" property="og:description">
+        <meta content="Sam Chowdhury's" property="og:site_name">
+        <meta content='https://samn-c.github.io/demodulator/media/special/backSmall.png' property='og:image'>
+        <meta name="theme-color" content="#EF6461">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <a id="top"></a>
+
+        <div class="row nonstick whiteback">
+            <div class="col-sm-12 textdivmargin divpad">
+                <h1>
+                    Demodulator and Audio Amplifier
+                </h1>
+
+                <h2 class="primary">
+                    ECE295: Hardware Design and Communication Project at UofT
+                </h2>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+            </ul>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="design.html">Design</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="prototype.html">Prototype</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="assembly.html">Assembly</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="testing.html">Testing</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+            <!-- welcome section -->
+            <div class="row sback">
+
+                <div class="col-sm-8 nopad fill">
+                    <img class="fill" style="opacity: 1;" src="media/special/back.png">
+                </div>
+                <div class="col-sm-4 textpad textdivmargin divpad">
+
+                    <h2 class="left">
+                        Designing a Subsystem of a Software-Defined Radio
+                    </h2>
+
+                    <p class="justify">
+                        In this second-year design project, teams of three ECE students designed one of 
+                        six subsystems for a Software-Defined Radio (SDR) transceiver. Our team designed 
+                        the demodulator and audio amplifier, which is the final subsystem in the receiver 
+                        chain. 
+                        <br>
+                        
+                    </p>
+                </div>
+            </div>
+
+            <!-- agile section -->
+            <div class="row pback">
+                <div class="col-sm-4 textdivmargin textpad divpad">
+                    <h2 class="left">
+                        Agile Process
+                    </h2>
+
+                    <p class="justify">
+                        This project was done using techniques borrowed from software design projects,
+                        known as agile design methodology. Throughout the project, there were two design 
+                        review milestones, as well as two presentations to non-technical audiences. The 
+                        project mimicked the industry design cycle to give students a realistic experience.
+
+                    </p>
+                </div>
+                
+                <div class="col-sm-8 nopad fill">
+                    <img class="fill" style="opacity: 1;" src="media/process.jpg">
+                </div>
+            </div>
+
+            <!-- award section -->
+            <div class="row sback">
+                <div class="col-sm-8 nopad fill">
+                    <img class="fill" style="opacity: 1;" src="media/award.jpg">
+                </div>
+
+                <div class="col-sm-4 textdivmargin textpad divpad">
+                    <h2 class="left">
+                        Award-Winning
+                    </h2>
+
+                    <p class="justify">
+                        Prizes were given to teams based on teamwork performance. Our team was awarded an 
+                        honourable mention for having the best design and testing process in the course. 
+                        Over 30 teams completed the project in its inaugural offering in the 2022 winter 
+                        semester.
+                    </p>
+                </div>
+            </div>
+
+            <!-- jump to section -->
+            <div class="row pback">
+                <div class="col-sm-3 textpad divpad center">
+                    <a href="design.html">
+                        <img src="media/icons/design.png">
+
+                        <h1>
+                            Design
+                        </h1>
+
+                        <img src="media/icons/go2.png">
+
+                        <p class="justify">
+                            <br>
+                            Click here to see Multisim and Altium designs for our board.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="col-sm-3 textpad divpad center">
+                    <a href="#top">
+                        <img src="media/icons/prototype.png">
+
+                        <h1>
+                            Prototype
+                        </h1>
+                        
+                        <img src="media/icons/up.png">
+
+                        <p class="justify">
+                            <br>
+                            You are currently on the prototype page.
+                        </p>
+                    </a>
+                </div>
+                
+                <div class="col-sm-3 textpad divpad center">
+                    <a href="assembly.html">
+                        <img src="media/icons/assembly.png">
+
+                        <h1>
+                            Assembly
+                        </h1>
+
+                        <img src="media/icons/go2.png">
+
+                        <p class="justify">
+                            <br>
+                            Click here to see the assembly process and the final product.
+                        </p>
+                    </a>
+                </div>
+                
+                <div class="col-sm-3 textpad divpad center">
+                    <a href="testing.html">
+                        <img src="media/icons/testing.png">
+                        
+                        <h1>
+                            Testing
+                        </h1>
+
+                        <img src="media/icons/go2.png">
+
+                        <p class="justify">
+                            <br>
+                            Click here to see our final testing results and output accuracy.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="foot">
+            <div class="row whiteback">
+                <div class="col-sm-4 divpad textdivmargin">
+                    <p class="center textpad">
+                        Made by 
+                        <a href="https://samn.ca" target="_blank">
+                            Sam Chowdhury <img src="media/icons/exit2.png">
+                        </a>
+                    </p>
+                </div>
+                
+                <div class="col-sm-4 divpad textdivmargin">
+                    <p class="center textpad">
+                        <a class="btn sbtn" href="#top">Back to top</a>
+                    </p>
+                </div>
+                
+                <div class="col-sm-4 divpad textdivmargin">
+                    <p class="center textpad">
+                        This website is not affiliated with the University of Toronto
+                    </p>
+                </div>
+            </div>
+
+            <div class="row blackback">
+                <div class="col-sm-6 divpad textdivmargin">
+                    <p class="center textpad">
+                        &copy; Sam Chowdhury
+                    </p>
+                </div>
+
+                <div class="col-sm-6 divpad textdivmargin">
+                    <p class="center textpad">
+                        Made with 
+                        <a href="https://getbootstrap.com/" target="_blank">
+                            Bootstrap <img src="media/icons/exit.png">
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -84,15 +84,15 @@
 }
 
 .pback a {
-    color: var(--first-title);
+    color: var(--second-title);
 }
 
 .pback a:visited {
-    color: var(--first-title);
+    color: var(--second-title);
 }
 
 .pback a:hover {
-    color: var(--first-title);
+    color: var(--c-secondary);
 }
 
 .sback {
@@ -116,15 +116,15 @@
 }
 
 .sback a {
-    color: var(--second-title);
+    color: var(--first-title);
 }
 
 .sback a:visited {
-    color: var(--second-title);
+    color: var(--first-title);
 }
 
 .sback a:hover {
-    color: var(--second-title);
+    color: var(--c-primary);
 }
 
 .whiteback {
