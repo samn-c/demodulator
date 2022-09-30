@@ -235,6 +235,7 @@ a {
     font-family: var(--title-font);
     text-decoration: none;
     font-size: 20px;
+    line-height: 1.5;
 }
 
 a:hover {
@@ -254,6 +255,7 @@ p {
     font-size: 17px;
     padding: 0;
     margin: 0;
+    line-height: 1.5;
 }
 
 li {
@@ -429,6 +431,16 @@ hr {
 
 .black {
     color: black !important; 
+}
+
+.pback .spoiler {
+    display: inline;
+    background-color: var(--first-text);
+}
+
+.sback .spoiler {
+    display: inline;
+    background-color: var(--second-text);
 }
 
 /* Rotation code */

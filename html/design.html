@@ -9,8 +9,8 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta content="Demodulator and Audio Amplifier Design" property="og:title">
-        <meta content="ECE295: Hardware Design and Communication Course Project @ UofT" property="og:description">
+        <meta content="Demodulator and Audio Amplifier" property="og:title">
+        <meta content="ECE295: Hardware Design and Communication @ UofT" property="og:description">
         <meta content="Sam Chowdhury's" property="og:site_name">
         <meta content='https://samn-c.github.io/demodulator/media/special/backSmall.png' property='og:image'>
         <meta name="theme-color" content="#EF6461">
@@ -75,10 +75,143 @@
         </nav>
 
         <div class="main">
+            <!-- preface -->
+            <div class="row pback">
+                <div class="col-sm-3 nopad"></div>
+                
+                <div class="col-sm-6 divpad">
+                    <h2 class="center">
+                        Preface
+                    </h2>
+
+                    <p class="justify">
+                        To prevent future students from copying my design 
+                        (and to avoid an appearance before the UofT Tribunal 
+                        for an academic offense), 
+                        all circuit element values and calculations are omitted from 
+                        this website. 
+                        
+                        <br><br>
+                        If you are curious to see the design files and 
+                        calculations, 
+                        
+                        <a href="https://samn.ca" target="_blank">
+                            contact me <img src="media/icons/exit.png">
+                        </a>
+
+                        directly :)
+                    </p>
+                </div>
+            </div>
+
+            <!-- requirements -->
+            <div class="row sback">
+                <div class="col-sm-12 nopad">
+                    <div class="row">
+                        <div class="col-sm-6 divpad textdivmargin">
+                            <h2 class="center textpad">
+                                Subsystem C: Design Requirements
+                            </h2>
+
+                            <p class="justify textpad">
+                                The following are a list of requirements that our design
+                                had to meet. We had to interface with Subsystem B and the 
+                                board also had to fit within set dimensions to be placed on the 
+                                SDR motherboard.
+                            </p>
+                        </div>
+
+                        <div class="col-sm-6 nopad">
+                            <img class="imgfull" src="media/design/295SDR.png">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 textdivmargin divpad">
+                            <ul>
+                                <br>
+                                
+                                <li>
+                                    2 input signals: Baseband I (in-phase) and Q (quadrature) signals from Subsystem B
+                                </li>
+
+                                <br>
+
+                                <li>
+                                    1 duplicated output signal for two 8&#8486; speakers (mono)
+                                </li>
+
+                                <br>
+
+                                <li>
+                                    Switching between AM and Single-Sideband (SSB) Demodulation, and volume control
+                                </li>
+
+                                <br>
+
+                                <li>
+                                    AM input signal specification: 40-100kHz carrier frequency, 20Hz-3kHz message signal
+                                </li>
+
+                                <br>
+
+                                <li>
+                                    SSB input signal specification: 2-3kHz carrier frequency, 0-3kHz message signal
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-sm-6 nopad">
+                            <img class="imgfull" src="media/design/requirements.png">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 nopad">
+                            <img class="imgfull" src="media/design/mechanical.png">
+                        </div>
+
+                        <div class="col-sm-6 textdivmargin divpad">
+                            <h2 class="textpad">
+                                What does it all mean?
+                            </h2>
+
+                            <p class="justify textpad">
+                                Honestly, almost none of these requirements made sense when I saw
+                                them for the first time. Later on I realized that a lot of the concepts
+                                we'd apply to our designs were actually concepts taught in third-year, 
+                                but luckily the teaching team helped us learn the concepts
+                                quickly enough to design our board.
+
+                                <br><br>
+
+                                That help came after the first design review, where we learned just how
+                                much was wrong with our first design.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M0 -->
+            <div class="row pback">
+                <div class="col-sm-12 nopad">
+                    <h2 class="center toppad">
+                        First Revision
+                    </h2>
+                    
+                    <!-- <br><br> -->
+                    <div class="fill">
+                        <img src="media/design/firstSchematic.jpg">
+                    </div>
+                </div>
+            </div>
+
+
             <!-- jump to section -->
             <div class="row pback">
                 <div class="col-sm-3 textpad divpad center">
-                    <a href="#top">
+                    <a href="design.html">
                         <img src="media/icons/design.png">
 
                         <h1>
@@ -106,7 +239,7 @@
 
                         <p class="center">
                             <br>
-                            Click here to see the breadboard phase of our design.
+                            Click here to see the breadboard phase.
                         </p>
                     </a>
                 </div>
@@ -140,7 +273,7 @@
 
                         <p class="center">
                             <br>
-                            Click here to see our final testing results and output accuracy.
+                            Click here to see final testing results and output accuracy.
                         </p>
                     </a>
                 </div>
