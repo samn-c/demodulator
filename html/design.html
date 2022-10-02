@@ -76,7 +76,7 @@
 
         <div class="main">
             <!-- preface -->
-            <div class="row pback">
+            <div class="row sback">
                 <div class="col-sm-3 nopad"></div>
                 
                 <div class="col-sm-6 divpad">
@@ -87,7 +87,7 @@
                     <p class="justify">
                         To prevent future students from copying my design 
                         (and to avoid an appearance before the UofT Tribunal 
-                        for an academic offense), 
+                        for an academic offence), 
                         all circuit element values and calculations are omitted from 
                         this website. 
                         
@@ -104,6 +104,37 @@
                 </div>
             </div>
 
+            <!-- design jump to -->
+            <div class="row pback">
+                <div class="col-sm-12 toppad">
+                    <h2 class="textpad center">
+                        Jump to Section
+                    </h2>
+
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+
+                        <div class="col-sm-2">
+                            <p class="center textpad botpad">
+                                <a class="btn sbtn" href="#rev1">First Revision</a>
+                            </p>
+                        </div>
+                        
+                        <div class="col-sm-2 textpad">
+                            <p class="center textpad botpad">
+                                <a class="btn sbtn" href="#rev2">Second Revision</a>
+                            </p>
+                        </div>
+                        
+                        <div class="col-sm-2 textpad">
+                            <p class="center textpad botpad">
+                                <a class="btn sbtn" href="#pcb">PCB Design</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- requirements -->
             <div class="row sback">
                 <div class="col-sm-12 nopad">
@@ -114,14 +145,14 @@
                             </h2>
 
                             <p class="justify textpad">
-                                The following are a list of requirements that our design
+                                The following is a list of requirements that our design
                                 had to meet. We had to interface with Subsystem B and the 
                                 board also had to fit within set dimensions to be placed on the 
                                 SDR motherboard.
                             </p>
                         </div>
 
-                        <div class="col-sm-6 nopad">
+                        <div class="col-sm-6 nopad textdivmargin">
                             <img class="imgfull" src="media/design/295SDR.png">
                         </div>
                     </div>
@@ -136,6 +167,18 @@
                                 </li>
 
                                 <br>
+                                
+                                <li>
+                                    AM input signal specification: 40 - 100kHz carrier frequency, 20Hz - 3kHz message signal
+                                </li>
+
+                                <br>
+
+                                <li>
+                                    SSB input signal specification: 2 - 3kHz carrier frequency, 0 - 3kHz message signal
+                                </li>
+
+                                <br>
 
                                 <li>
                                     1 duplicated output signal for two 8&#8486; speakers (mono)
@@ -144,30 +187,24 @@
                                 <br>
 
                                 <li>
-                                    Switching between AM and Single-Sideband (SSB) Demodulation, and volume control
+                                    Switching between AM and Single-Sideband (SSB) Demodulation + volume control
                                 </li>
 
                                 <br>
 
                                 <li>
-                                    AM input signal specification: 40-100kHz carrier frequency, 20Hz-3kHz message signal
-                                </li>
-
-                                <br>
-
-                                <li>
-                                    SSB input signal specification: 2-3kHz carrier frequency, 0-3kHz message signal
+                                    SSB phase specification: I and Q must be set 90&#176; &plusmn; 12.5&#176; apart
                                 </li>
                             </ul>
                         </div>
                         
-                        <div class="col-sm-6 nopad">
+                        <div class="col-sm-6 nopad textdivmargin">
                             <img class="imgfull" src="media/design/requirements.png">
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6 nopad">
+                        <div class="col-sm-6 nopad textdivmargin">
                             <img class="imgfull" src="media/design/mechanical.png">
                         </div>
 
@@ -178,9 +215,9 @@
 
                             <p class="justify textpad">
                                 Honestly, almost none of these requirements made sense when I saw
-                                them for the first time. Later on I realized that a lot of the concepts
+                                them for the first time. Later on, I realized that a lot of the concepts
                                 we'd apply to our designs were actually concepts taught in third-year, 
-                                but the teaching team helped us learn the concepts
+                                but the teaching team helped us learn
                                 quickly enough to design our board.
 
                                 <br><br>
@@ -193,20 +230,303 @@
                 </div>
             </div>
 
-            <!-- M0 -->
+            <!-- first revision -->
+            <a id="rev1"></a>
             <div class="row pback">
-                <div class="col-sm-12 nopad">
-                    <h2 class="center toppad">
+                <div class="col-sm-3 textdivmargin divpad">
+                    
+                    <h2 class="textpad">
                         First Revision
                     </h2>
-                    
-                    <!-- <br><br> -->
-                    <div class="fill">
-                        <img src="media/design/firstSchematic.jpg">
-                    </div>
+
+                    <p class="justify textpad">
+                        I know this is a lot to look at initially, but I wanted to show how disorganized
+                        our first revision was because we put everything on the same schematic. Right off 
+                        the bat, there were two mistakes, but we wrung out almost all of our issues by the second 
+                        design review.
+                    </p>
+                </div>
+
+                <div class="col-sm-9 nopad">
+                    <img class="imgfull" src="media/design/firstSchematic.jpg">  
                 </div>
             </div>
 
+            <!-- op-amp issue -->
+            <div class="row sback">
+                <div class="col-sm-12 divpad nopad">
+                    <h2 class="center textpad">
+                        SSB Demodulator - The First Problem
+                    </h2>
+
+                    <p class="center textpad botpad">
+                        Multisim Outputs: Red - In-Phase, Green - Quadrature, Blue - Summed Audio Output
+                    </p>
+
+                    <img class="imgfull" src="media/design/firstSSB.jpg">  
+
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+
+                        <div class="col-sm-6 toppad">
+                            <p class="justify textpad">
+                                Before moving into what's wrong with this design, I'd like to mention one thing we
+                                did right&#8212;op-amp biasing. The motherboard only supplied us with 5V and GND 
+                                terminals, meaning our signals had to be centred at 2.5V to make use of the op-amps.
+                                If you look at the C1-R1-R2, C3-R7-R8 and C4-R11-R12 combinations, they centre the
+                                input signals and the op-amp positive terminal in U1B. We made sure the cut-off frequency
+                                of the resistor and capacitor combinations was high enough to allow our signals to pass 
+                                through.
+
+                                <br><br>
+
+                                As for the problem, it has to do with the first op-amp. In SSB Demodulation, the
+                                I and Q signals are shifted 90 degrees apart and then added together.
+                                This gives us an audio signal at the output terminal of the second op-amp. The first op-amp
+                                is an All-Pass Filter (APF) that shifts the Q signal by 90 degrees, and the second op-amp is
+                                a Summing Amplifier that adds the two signals together. 
+                                
+                                <br><br>
+
+                                The issue was that the APF only shifted 10kHz signals by 90 degrees, rather than a 
+                                range of frequencies. Even if the SSB signal was centred at 10kHz, the message signal (audio)
+                                ranges from 0 - 3kHz on top of that, which would have given us an improper phase shift.
+                                The summing was done right, even though it's an inverted (audio) signal. Audio can be upside 
+                                down, or you'd hear something different when you put your headphones on upside-down. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            
+            <!-- AM is fine -->
+            <div class="row pback">
+                <div class="col-sm-12 divpad nopad">
+                    <h2 class="center textpad">
+                        AM Demodulator - No Issues
+                    </h2>
+
+                    <p class="center textpad botpad">
+                        Multisim Outputs: Red - AM Signal, Green - Envelope, Blue - Audio Output
+                    </p>
+
+                    <img class="imgfull" src="media/design/firstAM.jpg">  
+
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+
+                        <div class="col-sm-6 toppad">
+                            <p class="justify textpad">
+                                In AM Demodulation, the Amplitude-Modulated (AM) signal is first passed through an 
+                                Envelope detector which traces the amplitude of the signal with less perturbation.
+                                Then that signal passes through a Band-Pass Filter (BPF) which further smoothens out the signal,
+                                leaving us with a filtered audio signal. There's a formula for the R13-C5 combination that we 
+                                used to make sure it optimally envelopes the 40kHz - 100kHz AM signal. 
+
+                                <br><br>
+
+                                The C7-R15-R16 combination was to bias the signal at 2.5V, to centre it for the op-amps
+                                ahead of it (which were ultimately redundant, scroll down to read more). Typically an
+                                AM Demodulator has only a Low-Pass Filter, but the biasing turned it into a BPF in our initial
+                                design.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            
+            <!-- UGB and Audio Amplfier issue -->
+            <div class="row sback">
+                <div class="col-sm-12 divpad nopad">
+                    <h2 class="center textpad">
+                        Unity Gain Buffers and Audio Amplifiers - The Second Problem
+                    </h2>
+
+                    <img class="imgfull" src="media/design/firstAA.jpg">  
+
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+
+                        <div class="col-sm-6 toppad">
+                            <p class="justify textpad">
+                                We thought we'd need Unity Gain Buffers (UGB) to duplicate the audio signal without loss.
+                                We were wrong. Turns out a single audio amplifier chip was enough to amplify the 
+                                signal for both left and right audio channels (there's adequate impedance at the input and 
+                                output terminals of the chip), so we were able to remove 75% of the
+                                components in this part of the design. The UGBs weren't AC coupled with a capacitor to the
+                                audio amplifier chips, so that was another issue we overlooked in our first iteration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+
+            <!-- second revision -->
+            <a id="rev2"></a>
+            <div class="row pback">
+                <div class="col-sm-3 textdivmargin divpad">
+                    
+                    <h2 class="textpad">
+                        Second Revision
+                    </h2>
+
+                    <p class="justify textpad">
+                        A few weeks later, we had our second design review. We showcased an organized
+                        design for our board to the teaching team which had far fewer issues. We added
+                        a test point between the demodulators and the audio amplifier, which is the perfect 
+                        point to test all three systems independently with a single reference point. We 
+                        also implemented an LED indicator light to avoid having to check for power every
+                        time we tested the circuit.
+                    </p>
+                </div>
+
+                <div class="col-sm-9 nopad textdivmargin">
+                    <img class="imgfull" src="media/design/topLevelSchematic.jpg">  
+                </div>
+            </div>
+            
+            <!-- New SSB -->
+            <div class="row sback">
+                <div class="col-sm-12 nopad">
+                    <h2 class="center toppad textpad">
+                        The Improved SSB Demodulator
+                    </h2>
+
+                    <img class="imgfull" src="media/design/SSBSchematic.jpg">  
+
+                    <div class="row">
+                        <div class="col-sm-6 divpad textdivmargin">
+                            <p class="justify textpad">
+                                This time a chain of three APFs for both input signals was used. We
+                                found a reference design that was provided by the TA to help us choose our
+                                element values, which creates a clean range of 90-degree phase shifting between
+                                250Hz to 3.6kHz as you can see in the output graph. The Summing Amplifier was 
+                                not modified.
+                            </p>
+                        </div>
+
+                        <div class="col-sm-6 textdivmargin nopad">
+                            <img class="imgfull" src="media/design/SSBOutput.png">
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            
+            <!-- New AM Demod -->
+            <div class="row pback">
+                <div class="col-sm-12 divpad nopad">
+                    <h2 class="center textpad">
+                        Modifying the AM Demodulator
+                    </h2>
+
+                    <img class="imgfull" src="media/design/AMSchematic.jpg">  
+
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+
+                        <div class="col-sm-6 toppad">
+                            <p class="justify textpad">
+                                Not much changed here apart from removing the 2.5V biasing, since we didn't
+                                have UGBs anymore. We tweaked the RC values a little to optimize more for 
+                                a 0 - 3kHz message signal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+                        
+            <!-- New Audio -->
+            <div class="row sback">
+                <div class="col-sm-12 nopad">
+                    <h2 class="center toppad textpad">
+                        The Simplified Audio Amplifier
+                    </h2>
+
+                    <img class="imgfull" src="media/design/audioAmpSchematic.jpg">  
+
+                    <div class="row">
+                        <div class="col-sm-6 divpad textdivmargin">
+                            <p class="justify textpad">
+                                Since the second Audio Amplifier and the UGBs had been removed,
+                                the design became a lot simpler. We also added C11, which AC couples the demodulators
+                                (mainly the SSB since it is sending a signal biased to 2.5V) to the amplifier.
+
+                                <br><br>
+
+                                We had a minor issue with this design which was never solved. Since we only had
+                                a 5V supply, the amplifier would clip the audio if we set the volume too high with the 
+                                potentiometer. Ultimately we used a higher resistance potentiometer which made our
+                                design capable of 65% volume before clipping.
+                            </p>
+                        </div>
+                        
+                        <div class="col-sm-6 nopad textdivmargin">
+                            <img class="imgfull" src="media/design/audioAmpOut.png">
+                        </div>
+                    </div>
+                </div>
+            </div>   
+
+            <!-- PCB Design -->
+            <a id="pcb"></a>
+            <div class="row pback">
+
+                <div class="col-sm-2 nopad fill">
+                    <img class="imgfull fill" src="media/design/3dView.jpg">
+                </div>
+
+                <div class="col-sm-2 nopad fill">
+                    <img class="imgfull" src="media/design/3dViewBack.png">
+                </div>
+                
+                <div class="col-sm-4 textdivmargin divpad nopad">
+                    <h2 class="textpad">
+                        PCB Design
+                    </h2>
+
+                    <p class="justify textpad">
+                        A week after the second design review, our PCB Designs were due for review
+                        (as well as circuit reviews for teams that needed more design tweaks). I spent
+                        the entire week avoiding my other course work to arrange our design as best as 
+                        possible and ordering parts since it was challenging to fit everything on such a small
+                        board. I could have chosen to place all the resistors in a hairpin style, but I 
+                        wanted to make sure our design followed good practices. It was also my favourite 
+                        part of the project and I was very satisfied with the PCB arrangement :)
+
+                        <br><br>
+
+                        In terms of good practice, I also put ground planes on both the top and bottom planes.
+                        We didn't learn much about EM shielding, but for safe measure, I added via stitching between
+                        the two ground planes.
+                    </p>
+                </div>
+                
+                <div class="col-sm-2 nopad fill">
+                    <img class="imgfull" src="media/design/frontTrace.jpg">
+                </div>
+
+                <div class="col-sm-2 nopad fill">
+                    <img class="imgfull" src="media/design/backTrace.jpg">
+                </div>
+            </div>   
+
+            <!-- the end of design -->
+            <div class="row sback">
+                <div class="col-sm-3"></div>
+
+                <div class="col-sm-6 divpad">
+                    <h2 class="center textpad">
+                        What next?
+                    </h2>
+
+                    <p class="justify textpad">
+                        The PCB was ready to be manufactured, but it took a month for the boards to arrive.
+                        In the meantime, we decided to test a prototype of our design. Even though prototyping was not 
+                        mandatory for the project, it was a necessary step to avoid relying on our
+                        PCB to work on the first attempt.
+                    </p>
+                </div>
+            </div>
 
             <!-- jump to section -->
             <div class="row pback">
