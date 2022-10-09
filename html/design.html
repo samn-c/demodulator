@@ -33,7 +33,7 @@
                 </h1>
 
                 <h2 class="primary">
-                    ECE295: Hardware Design and Communication Project at UofT
+                    ECE295: Hardware Design and Communication at UofT
                 </h2>
             </div>
         </div>
@@ -76,15 +76,19 @@
 
         <div class="main">
             <!-- preface -->
-            <div class="row sback">
-                <div class="col-sm-3 nopad"></div>
-                
-                <div class="col-sm-6 divpad">
-                    <h2 class="center">
+            <div class="row pback">
+                <div class="col-sm-2 nopad"></div>
+
+                <div class="col-sm-6 divpad textdivmargin">
+                    <h1 class="center textpad">
+                        Design
+                    </h1>
+
+                    <h2 class="center textpad">
                         Preface
                     </h2>
 
-                    <p class="justify">
+                    <p class="justify textpad">
                         To prevent future students from copying my design 
                         (and to avoid an appearance before the UofT Tribunal 
                         for an academic offence), 
@@ -102,39 +106,27 @@
                         directly :)
                     </p>
                 </div>
-            </div>
-
-            <!-- design jump to -->
-            <div class="row pback">
-                <div class="col-sm-12 toppad">
-                    <h2 class="textpad center">
-                        Jump to Section
+                
+                <div class="col-sm-3 nopad textdivmargin">
+                    <h2 class="center textpad toppad">
+                        Jump to
                     </h2>
-
-                    <div class="row">
-                        <div class="col-sm-3"></div>
-
-                        <div class="col-sm-2">
-                            <p class="center textpad botpad">
-                                <a class="btn sbtn" href="#rev1">First Revision</a>
-                            </p>
-                        </div>
-                        
-                        <div class="col-sm-2 textpad">
-                            <p class="center textpad botpad">
-                                <a class="btn sbtn" href="#rev2">Second Revision</a>
-                            </p>
-                        </div>
-                        
-                        <div class="col-sm-2 textpad">
-                            <p class="center textpad botpad">
-                                <a class="btn sbtn" href="#pcb">PCB Design</a>
-                            </p>
-                        </div>
-                    </div>
+                    
+                    <p class="center textpad toppad">
+                        <a class="btn" href="#rev1">1st Revision</a>
+                    </p>
+                    
+                    <p class="center textpad toppad">
+                        <a class="btn" href="#rev2">2nd Revision</a>
+                    </p>
+                    
+                    <p class="center textpad toppad botpad">
+                        <a class="btn" href="#pcb">PCB Design</a>
+                    </p>
                 </div>
-            </div>
 
+            </div>
+            
             <!-- requirements -->
             <div class="row sback">
                 <div class="col-sm-12 nopad">
@@ -214,9 +206,9 @@
                             </h2>
 
                             <p class="justify textpad">
-                                Honestly, almost none of these requirements made sense when I saw
+                                Honestly, most of these requirements didn't make sense when I saw
                                 them for the first time. Later on, I realized that a lot of the concepts
-                                we'd apply to our designs were actually concepts taught in third-year, 
+                                we'd apply to our designs were actually taught in third-year, 
                                 but the teaching team helped us learn
                                 quickly enough to design our board.
 
@@ -338,7 +330,7 @@
             <!-- UGB and Audio Amplfier issue -->
             <div class="row sback">
                 <div class="col-sm-12 divpad nopad">
-                    <h2 class="center textpad">
+                    <h2 class="center textpad botpad">
                         Unity Gain Buffers and Audio Amplifiers - The Second Problem
                     </h2>
 
@@ -388,7 +380,7 @@
             <!-- New SSB -->
             <div class="row sback">
                 <div class="col-sm-12 nopad">
-                    <h2 class="center toppad textpad">
+                    <h2 class="center divpad textpad">
                         The Improved SSB Demodulator
                     </h2>
 
@@ -415,7 +407,7 @@
             <!-- New AM Demod -->
             <div class="row pback">
                 <div class="col-sm-12 divpad nopad">
-                    <h2 class="center textpad">
+                    <h2 class="center textpad botpad">
                         Modifying the AM Demodulator
                     </h2>
 
@@ -438,7 +430,7 @@
             <!-- New Audio -->
             <div class="row sback">
                 <div class="col-sm-12 nopad">
-                    <h2 class="center toppad textpad">
+                    <h2 class="center divpad textpad">
                         The Simplified Audio Amplifier
                     </h2>
 
@@ -471,12 +463,14 @@
             <a id="pcb"></a>
             <div class="row pback">
 
-                <div class="col-sm-2 nopad fill">
-                    <img class="imgfull fill" src="media/design/3dView.jpg">
-                </div>
+                <div class="col-sm-4 row">
+                    <div class="col nopad textdivmargin">
+                        <img class="imgfull" src="media/design/3dView.jpg">
+                    </div>
 
-                <div class="col-sm-2 nopad fill">
-                    <img class="imgfull" src="media/design/3dViewBack.png">
+                    <div class="col nopad textdivmargin">
+                        <img class="imgfull" src="media/design/3dViewBack.jpg">
+                    </div>
                 </div>
                 
                 <div class="col-sm-4 textdivmargin divpad nopad">
@@ -486,27 +480,39 @@
 
                     <p class="justify textpad">
                         A week after the second design review, our PCB Designs were due for review
-                        (as well as circuit reviews for teams that needed more design tweaks). I spent
-                        the entire week avoiding my other course work to arrange our design as best as 
-                        possible and ordering parts since it was challenging to fit everything on such a small
-                        board. I could have chosen to place all the resistors in a hairpin style, but I 
-                        wanted to make sure our design followed good practices. It was also my favourite 
-                        part of the project and I was very satisfied with the PCB arrangement :)
+                        (as well as circuit reviews for teams that needed to tweak their design more).
+                        It was challenging to fit everything on such a small board, so I spent
+                        the entire week avoiding my other courses to arrange our design as best as 
+                        possible and ordering parts. I could have chosen to place all the resistors in a 
+                        hairpin style, but I wanted to make sure our design followed good practices. It 
+                        was also my favourite part of the project and I was very satisfied with the 
+                        PCB arrangement :)
 
                         <br><br>
 
-                        In terms of good practice, I also put ground planes on both the top and bottom planes.
-                        We didn't learn much about EM shielding, but for safe measure, I added via stitching between
+                        The subcircuits are distinguishable on the board. The five elements connected at the top
+                        make up the AM Demodulator, and beneath it is the LED indicator. Then most of the board
+                        is taken up by the SSB Demodulator (elements connected to U1 - U4). You can see both the 
+                        demodulator outputs connected to S1 near the bottom right, right next to the J1 test point.
+                        Lastly, at the bottom of the board, is the Audio Amplifier.
+
+                        <br><br>
+
+                        All signal traces were on the top plane (red), while the 5V power signal was on the bottom plane (blue).
+                        In terms of good practice, I also placed ground planes on both the top and bottom.
+                        We didn't go into the details of EM shielding, but for safe measure, I added via stitching between
                         the two ground planes.
                     </p>
                 </div>
                 
-                <div class="col-sm-2 nopad fill">
-                    <img class="imgfull" src="media/design/frontTrace.jpg">
-                </div>
+                <div class="col-sm-4 row">
+                    <div class="col nopad textdivmargin">
+                        <img class="imgfull" src="media/design/frontTrace.jpg">
+                    </div>
 
-                <div class="col-sm-2 nopad fill">
-                    <img class="imgfull" src="media/design/backTrace.jpg">
+                    <div class="col nopad textdivmargin">
+                        <img class="imgfull" src="media/design/backTrace.jpg">
+                    </div>
                 </div>
             </div>   
 
@@ -522,8 +528,8 @@
                     <p class="justify textpad">
                         The PCB was ready to be manufactured, but it took a month for the boards to arrive.
                         In the meantime, we decided to test a prototype of our design. Even though prototyping was not 
-                        mandatory for the project, it was a necessary step to avoid relying on our
-                        PCB to work on the first attempt.
+                        mandatory for the project, it was a necessary step to check for issues in case our
+                        PCB didn't work on the first attempt.
                     </p>
                 </div>
             </div>
