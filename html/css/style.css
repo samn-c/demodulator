@@ -53,6 +53,10 @@
     text-align: center;
 }
 
+.centerdiv {
+    margin: auto;
+}
+
 .justify {
     text-align: justify;
     text-justify: inter-word;
@@ -262,16 +266,19 @@ li {
     font-family: var(--body-font);
     text-decoration: none;
     font-size: 17px;
+    margin: 0;
 }
 
 h1 {
     font-family: var(--title-font);
     font-size: 50px;
+    margin: 0;
 }
 
 h2 {
     font-family: var(--title-font);
     font-size: 30px;
+    margin: 0;
 }
 
 /* Navigation Bar */
