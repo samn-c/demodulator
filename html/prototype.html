@@ -33,7 +33,7 @@
                 </h1>
 
                 <h2 class="primary">
-                    ECE295: Hardware Design and Communication Project at UofT
+                    ECE295: Hardware Design and Communication at UofT
                 </h2>
             </div>
         </div>
@@ -75,6 +75,157 @@
         </nav>
         
         <div class="main">
+            <!-- intro -->
+            <div class="row pback">
+                <div class="col-sm-3"></div>
+
+                <div class="col-sm-6 divpad textdivmargin">
+                    <h1 class="center textpad">
+                        Prototype
+                    </h1>
+
+                    <p class="justify textpad">
+                        This was an optional step to ensure our design was working
+                        and to avoid potential problems once the manufactured PCBs arrived. I did some quick
+                        breadboard tests with our design, which gave us more confidence in our design.
+                    </p>
+                </div>
+            </div>
+
+            <!-- board image -->
+            <div class="row sback">
+                <div class="col-sm-4 divpad textdivmargin">
+                    <h2 class="textpad">
+                        The Breadboard Stage
+                    </h2>
+
+                    <p class="justify textpad botpad">
+                        Here's a picture of the prototype I built at home. I was mainly testing the 
+                        Audio Amplifier, so it doesn't include the AM Demodulator, which would have only been
+                        an additional 5 elements. One thing to note is the two yellow wires at the top are 
+                        also disconnected in this image since the SSB demodulator wasn't being tested.
+
+                        <br><br>
+
+                        I connected the board to a Bluetooth receiver with a 3.5mm breakout connector, which
+                        let me test an audio output without the chance of frying a directly connected phone or 
+                        laptop. Since our potentiometer for volume control hadn't arrived yet, I used a suitably
+                        large resistor to mimic various volume levels.
+                    </p>
+                </div>
+
+                <div class="col-sm-8 nopad textdivmargin">
+                    <img class="imgfull" src="media/prototype/prototype.jpg">
+                </div>
+            </div>
+
+            <!-- board video -->
+            <div class="row pback">
+                <div class="col-sm-12 nopad divpad">
+                    <h2 class="center textpad botpad">
+                        Audio Testing
+                    </h2>
+
+                    <iframe class="imgfull" height="550px" src="https://www.youtube.com/embed/CMQ7Dn0z8Zw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    
+                    <p class="center textpad toppad">
+                        To my surprise, the output was especially loud for such a small amplifier, and 
+                        the audio quality was acceptable.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SSB -->
+            <div class="row sback">
+                <div class="col-sm-6 divpad textdivmargin">
+                    <h2 class="textpad">
+                        SSB Demodulator
+                    </h2>
+
+                    <p class="justify textpad">
+                        I wasn't entirely familiar with operating this specific oscilloscope at the time, so 
+                        it was a gradual learning experience before we captured testing results on the PCB. 
+                        I also didn't originally know
+                        that the oscilloscope had a built-in feature to save images to a USB drive, so I 
+                        used my phone to take pictures this time. 
+
+                        <br><br>
+
+                        The 
+                        <a href="testing.html">
+                            testing <img src="media/icons/exit2.png">
+                        </a>
+
+                        page has more informative images than the ones I captured here, but from these,
+                        we can prove that our design achieves a 90-degree phase shift between the I and Q 
+                        signals, as expected.
+                    </p>
+                </div>
+
+                <div class="col-sm-6 textdivmargin">
+                    <img class="imgfull" src="media/prototype/SSBTest.jpg">
+                </div>
+            </div>
+
+            <!-- SSB images -->
+            <div class="row sback">
+                <div class="col-sm-6 textdivmargin">
+                    <img class="imgfull" src="media/prototype/SSBTest0.jpg">
+                </div>
+
+                <div class="col-sm-6 textdivmargin">
+                    <img class="imgfull" src="media/prototype/SSBTest2.jpg">
+                </div>
+            </div>
+
+            <!-- AM -->
+            <div class="row pback">
+                <div class="col-sm-6 divpad textdivmargin">
+                    <h2 class="textpad">
+                        AM Demodulator
+                    </h2>
+
+                    <p class="justify textpad">
+                        This is where we started to see problems in our design. Our AM demodulator was clipping 
+                        the bottom of our signal for lower frequencies. The output was also smaller in amplitude
+                        than the input at higher frequencies. We kept it was it was, because our design 
+                        *mostly* supported both 40kHz and 100kHz carrier signals.
+                    </p>
+                </div>
+
+                <div class="col-sm-6 textdivmargin">
+                    <img class="imgfull" src="media/prototype/AMTest2.jpg">
+                </div>
+            </div>
+
+            <!-- AM images -->
+            <div class="row pback">
+                <div class="col-sm-6 textdivmargin">
+                    <img class="imgfull" src="media/prototype/AMTest3.jpg">
+                </div>
+
+                <div class="col-sm-6 textdivmargin">
+                    <img class="imgfull" src="media/prototype/AMTest5.jpg">
+                </div>
+            </div>
+            
+            <!-- the end of prototype -->
+            <div class="row sback">
+                <div class="col-sm-3"></div>
+
+                <div class="col-sm-6 divpad">
+                    <h2 class="center textpad">
+                        Moving On
+                    </h2>
+
+                    <p class="center textpad">
+                        We waited a few more weeks after prototyping to receive our boards, then immediately
+                        moved on to assembly.
+                    </p>
+                </div>
+            </div>
+
             <!-- jump to section -->
             <div class="row pback">
                 <div class="col-sm-3 textpad divpad center">
