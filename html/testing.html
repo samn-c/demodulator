@@ -75,6 +75,321 @@
         </nav>
 
         <div class="main">
+            <!-- intro -->
+            <div class="row sback">
+                <div class="col-sm-2"></div>
+
+                <div class="col-sm-6 divpad textdivmargin">
+                    <h1 class="center textpad">
+                        Testing
+                    </h1>
+
+                    <p class="justify textpad">
+                        The last step in the design process. Ultimately the most critical as well,
+                        as it determines just how much of the months of work was successful while highlighting 
+                        what may have gone wrong.
+
+                        <br><br>
+
+                        As serious as the previous statement sounds, you're allowed to make mistakes in ECE295.
+                        The project is designed to mimic the industry, which also isn't invincible to mistakes.
+                        By making mistakes here, we learn from and overcome them, preparing us to overcome 
+                        challenges in the future (and in the industry).
+                    </p>
+                </div>
+                
+                <div class="col-sm-3 nopad textdivmargin">
+                    <h2 class="center textpad toppad">
+                        Jump to
+                    </h2>
+                    
+                    <p class="center textpad toppad">
+                        <a class="btn" href="#SSB">SSB Testing</a>
+                    </p>
+                    
+                    <p class="center textpad toppad">
+                        <a class="btn" href="#AM">AM Testing</a>
+                    </p>
+                    
+                    <p class="center textpad toppad botpad">
+                        <a class="btn" href="#AT">Audio Testing</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Set up -->
+            <div class="row pback">
+                <div class="col-sm-12 divpad nopad textdivmargin">
+                    <h2 class="center textpad botpad">
+                        The Testing Setup
+                    </h2>
+
+                    <div class="row">
+                        <div class="col-sm-6 nopad">
+                            <img class="imgfull" src="media/testing/onMB2.jpg">
+                        </div>
+                        
+                        <div class="col-sm-6 nopad">
+                            <img class="imgfull" src="media/testing/testingSetup.jpg">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 nopad">
+                            <p class="justify textpad toppad">
+                                To test our design, we placed it on the ECE295 motherboard. It has BNC
+                                connectors for various input and output signals, a 3.5mm audio output, 
+                                interfacing and a power supply for all subsystems. The testing equipment
+                                included a Digital Storage Oscilloscope, Function Generators, a DC Power Supply,
+                                and a Digital Multimeter.
+                            </p>
+                        </div>
+
+                        <div class="col-sm-6 nopad">
+                            <p class="justify textpad toppad">
+                                The motherboard was connected to two synchronized function generators which
+                                produced identical signals 180 degrees apart. This was mainly used to test the SSB
+                                Demodulator, which would ideally modify the signals to be 90 degrees apart if 
+                                it were to work correctly.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SSB -->
+            <a id="SSB"></a>
+            <div class="row sback">
+                <div class="col-sm-12 nopad">
+                    <h2 class="center textpad divpad">
+                        SSB Demodulator Testing
+                    </h2>
+
+                    <div class="row">
+                        <div class="col-sm-6 nopad">
+                            <img class="imgfull" src="media/testing/testingView.jpg">
+                        </div>
+
+                        <div class="col-sm-6 nopad">
+                            <img class="imgfull" src="media/testing/bodePlotPoints.JPG">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 nopad textdivmargin">
+                            <p class="justify textpad divpad">
+                                The target specification for SSB was to produce a 90&#176; &plusmn; 12.5&#176; phase shift between the I and Q
+                                signals. After hooking up the oscilloscope's probes to the outputs of the SSB Demodulator and connecting its 
+                                generator output to both the I and Q input of the motherboard, we used the oscilloscope for Frequency
+                                Response Analysis of the board. 
+
+                                <br><br>
+
+                                The circuit produced a clean phase shift of about 87.9 degrees (clearly within the &plusmn; 12.5&#176; error margin)
+                                between 250Hz and 3.6kHz, as expected during the design phase. We then measured phase at various frequencies as shown
+                                in the pictures below.
+                            </p>
+                        </div>
+
+                        <div class="col-sm-6 nopad textdivmargin">
+                            <img class="imgfull" src="media/testing//Oscilloscope/bodePlot.jpg">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-4 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/SSB100.jpg">
+                        </div>
+                        
+                        <div class="col-sm-4 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/SSB200.jpg">
+                        </div>
+                        
+                        <div class="col-sm-4 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/SSB500.jpg">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-4 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/SSB1k.jpg">
+                        </div>
+                        
+                        <div class="col-sm-4 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/SSB3k.jpg">
+                        </div>
+                        
+                        <div class="col-sm-4 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/SSB4k.jpg">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+
+                        <div class="col-sm-6">
+                            <p class="justify textpad divpad">
+                                The above confirmed that our design worked within the expected range.
+                                Unfortunately, by design, the phase shifting didn't work all the way down to 
+                                20Hz (the lowest audio frequency), but since our audio range was 
+                                already limited to 0 - 3kHz by the design requirements, perfect 
+                                audio quality was not achievable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AM -->
+            <a id="AM"></a>
+            <div class="row pback">
+                <div class="col-sm-12 nopad">
+                    <div class="row">
+                        <div class="col-sm-6 divpad textdivmargin">
+                            <h2 class="center textpad">
+                                AM Demodulator Testing
+                            </h2>
+
+                            <p class="justify textpad">
+                                The board's testing point was used to look at the output of the AM Demodulator. 
+                                Using one function generator to input an AM signal into the I input of the motherboard,
+                                we tested the AM demodulator at both 40kHz and 100kHz carrier frequencies.
+                                
+                                <br><br>
+
+                                This test wasn't as satisfying or as successful as the SSB Demodulator. Our AM Demodulator
+                                was the same as during the prototype phase, so it couldn't keep up with tracing the higher audio 
+                                frequencies and clipped the bottom of the lower audio frequency signals. The testing results 
+                                can be found below.
+
+                                <br><br>
+
+                                A combination of issues led to an imperfect AM Demodulator. The diode
+                                was not particularly efficient, which we could have overcome with a more expensive component
+                                or with a precision rectifier circuit. However, the main issue was the difference between the carrier 
+                                and message frequencies. Normally AM radio is between 500kHz - 1.6MHz, which is far more headroom
+                                to demodulate than 40kHz or 100kHz down to 0 - 3kHz (A limitation set by the project design requirements). 
+                            </p>
+                        </div>
+
+                        <div class="col-sm-6 nopad textdivmargin">
+                            <img class="imgfull" src="media/testing/testPoint.jpg">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/AM40k-100.jpg">
+                        </div>
+                        
+                        <div class="col-sm-3 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/AM40k-500.jpg">
+                        </div>
+                        
+                        <div class="col-sm-3 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/AM40k-1k.jpg">
+                        </div>
+                        
+                        <div class="col-sm-3 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/AM40k-3k.jpg">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/AM100k-100.jpg">
+                        </div>
+                        
+                        <div class="col-sm-3 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/AM100k-500.jpg">
+                        </div>
+                        
+                        <div class="col-sm-3 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/AM100k-1k.jpg">
+                        </div>
+                        
+                        <div class="col-sm-3 nopad">
+                            <img class="imgfull" src="media/testing/Oscilloscope/AM100k-3k.jpg">
+                        </div>
+                    </div>
+
+                    <p class="center textpad divpad">
+                        Top Row - 40kHz carrier frequency<br>
+                        Bottom Row - 100kHz carrier frequency<br>
+                        at 100Hz, 500Hz, 1kHz and 3kHz message frequencies
+                    </p>
+                </div>
+            </div>
+            
+            <!-- audio -->
+            <a id="AT"></a>
+            <div class="row sback">
+                <div class="col-sm-12 nopad">
+                    <h2 class="center textpad toppad">
+                        Audio Amplifier Testing
+                    </h2>
+
+                    <p class="center textpad botpad">
+                        Here are two videos to show audio testing. The first one tests sound quality, and the second tests volume control.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-sm-6 nopad">
+                            <iframe class="imgfull" height="550px" src="https://www.youtube.com/embed/Je07DrLt63g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            
+                        </div>
+
+                        <div class="col-sm-6 nopad">
+                            <iframe class="imgfull" height="550px" src="https://www.youtube.com/embed/ZT5JysrHmy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <p class="center textpad divpad">
+                        I think we can safely call the audio testing a success since we're ignoring sound quality.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- integration day -->
+            <div class="row pback">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6 nopad">
+                    <h2 class="center texpad toppad">
+                        Systems Integration Day
+                    </h2>
+
+                    <p class="justify textpad botpad">
+                        At the end of the project, all the teams with working boards came together to 
+                        integrate their subsystems and create a working SDR. Our team participated, and
+                        our board was able to provide an audio output for an SSB signal received from another
+                        ECE295 SDR. By no surprise, our AM Demodulator did not work well enough to be operational.
+                    </p>
+                </div>
+            </div>
+
+            <!-- the end -->
+            <div class="row sback">
+                <div class="col-sm-3"></div>
+
+                <div class="col-sm-6">
+                    <h2 class="center texpad toppad">
+                        The End?
+                    </h2>
+
+                    <p class="justify textpad botpad">
+                        With testing done, all that was left was to showcase our PCB and testing results 
+                        in a final presentation. I would've put a link to our slides here, but this website
+                        is a suitable alternative to showing off our entire design process and most of what
+                        I've learned from it. If you made it this far, thank you! You can find out more about
+                        this project overall
+                        
+                        <a href="about.html">
+                            here <img src="media/icons/exit2.png">
+                        </a>.
+                    </p>
+                </div>
+            </div>
+
             <!-- jump to section -->
             <div class="row pback">
                 <div class="col-sm-3 textpad divpad center">
