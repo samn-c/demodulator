@@ -77,7 +77,7 @@
         <div class="main">
             <!-- intro -->
             <div class="row pback">
-                <div class="col-sm-3"></div>
+                <div class="col-sm-2"></div>
 
                 <div class="col-sm-6 divpad textdivmargin">
                     <h1 class="center textpad">
@@ -88,6 +88,24 @@
                         This was an optional step to ensure our design was working
                         and to avoid potential problems once the manufactured PCBs arrived. I did some quick
                         breadboard tests with our design, which gave us more confidence in our design.
+                    </p>
+                </div>
+                
+                <div class="col-sm-3 nopad textdivmargin">
+                    <h2 class="center textpad toppad">
+                        Jump to
+                    </h2>
+                    
+                    <p class="center textpad toppad">
+                        <a class="btn" href="#SSB">SSB Testing</a>
+                    </p>
+                    
+                    <p class="center textpad toppad">
+                        <a class="btn" href="#AM">AM Testing</a>
+                    </p>
+                    
+                    <p class="center textpad toppad botpad">
+                        <a class="btn" href="#AT">Audio Testing</a>
                     </p>
                 </div>
             </div>
@@ -119,25 +137,9 @@
                 </div>
             </div>
 
-            <!-- board video -->
-            <div class="row pback">
-                <div class="col-sm-12 nopad divpad">
-                    <h2 class="center textpad botpad">
-                        Audio Testing
-                    </h2>
-
-                    <iframe class="imgfull" height="550px" src="https://www.youtube.com/embed/CMQ7Dn0z8Zw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                    
-                    <p class="center textpad toppad">
-                        To my surprise, the output was especially loud for such a small amplifier, and 
-                        the audio quality was acceptable.
-                    </p>
-                </div>
-            </div>
-
             <!-- SSB -->
-            <div class="row sback">
+            <a id="SSB"></a>
+            <div class="row pback">
                 <div class="col-sm-6 divpad textdivmargin">
                     <h2 class="textpad">
                         SSB Demodulator
@@ -169,7 +171,7 @@
             </div>
 
             <!-- SSB images -->
-            <div class="row sback">
+            <div class="row pback">
                 <div class="col-sm-6 textdivmargin">
                     <img class="imgfull" src="media/prototype/SSBTest0.jpg">
                 </div>
@@ -180,7 +182,8 @@
             </div>
 
             <!-- AM -->
-            <div class="row pback">
+            <a id="AM"></a>
+            <div class="row sback">
                 <div class="col-sm-6 divpad textdivmargin">
                     <h2 class="textpad">
                         AM Demodulator
@@ -200,13 +203,33 @@
             </div>
 
             <!-- AM images -->
-            <div class="row pback">
+            <div class="row sback">
                 <div class="col-sm-6 textdivmargin">
                     <img class="imgfull" src="media/prototype/AMTest3.jpg">
                 </div>
 
                 <div class="col-sm-6 textdivmargin">
                     <img class="imgfull" src="media/prototype/AMTest5.jpg">
+                </div>
+            </div>
+            
+            <!-- board video -->
+            <a id="AT"></a>
+            <div class="row pback">
+                <div class="col-sm-3"></div>
+
+                <div class="col-sm-6 nopad divpad">
+                    <h2 class="center textpad botpad">
+                        Audio Testing
+                    </h2>
+
+                    <iframe class="imgfull" height="550px" src="https://www.youtube.com/embed/CMQ7Dn0z8Zw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    
+                    <p class="center textpad toppad">
+                        To my surprise, the output was especially loud for such a small amplifier, and 
+                        the audio quality was acceptable.
+                    </p>
                 </div>
             </div>
             
@@ -219,7 +242,7 @@
                         Moving On
                     </h2>
 
-                    <p class="center textpad">
+                    <p class="justify textpad">
                         We waited a few more weeks after prototyping to receive our boards, then immediately
                         moved on to assembly.
                     </p>
