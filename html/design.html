@@ -76,7 +76,7 @@
 
         <div class="main">
             <!-- preface -->
-            <div class="row pback">
+            <div class="row sback">
                 <div class="col-sm-2 nopad"></div>
 
                 <div class="col-sm-6 divpad textdivmargin">
@@ -127,7 +127,7 @@
             </div>
             
             <!-- requirements -->
-            <div class="row sback">
+            <div class="row pback">
                 <div class="col-sm-12 nopad">
                     <div class="row">
                         <div class="col-sm-6 divpad textdivmargin">
@@ -223,7 +223,7 @@
 
             <!-- first revision -->
             <a id="rev1"></a>
-            <div class="row pback">
+            <div class="row sback">
                 <div class="col-sm-3 textdivmargin divpad">
                     
                     <h2 class="textpad">
@@ -244,7 +244,7 @@
             </div>
 
             <!-- op-amp issue -->
-            <div class="row sback">
+            <div class="row pback">
                 <div class="col-sm-12 divpad nopad">
                     <h2 class="center textpad">
                         SSB Demodulator - The First Problem
@@ -291,7 +291,7 @@
             </div>    
             
             <!-- AM is fine -->
-            <div class="row pback">
+            <div class="row sback">
                 <div class="col-sm-12 divpad nopad">
                     <h2 class="center textpad">
                         AM Demodulator - No Issues
@@ -327,7 +327,7 @@
             </div>  
             
             <!-- UGB and Audio Amplfier issue -->
-            <div class="row sback">
+            <div class="row pback">
                 <div class="col-sm-12 divpad nopad">
                     <h2 class="center textpad botpad">
                         Unity Gain Buffers and Audio Amplifiers - The Second Problem
@@ -354,7 +354,7 @@
 
             <!-- second revision -->
             <a id="rev2"></a>
-            <div class="row pback">
+            <div class="row sback">
                 <div class="col-sm-3 textdivmargin divpad">
                     
                     <h2 class="textpad">
@@ -377,7 +377,7 @@
             </div>
             
             <!-- New SSB -->
-            <div class="row sback">
+            <div class="row pback">
                 <div class="col-sm-12 nopad">
                     <h2 class="center divpad textpad">
                         The Improved SSB Demodulator
@@ -404,7 +404,7 @@
             </div>   
             
             <!-- New AM Demod -->
-            <div class="row pback">
+            <div class="row sback">
                 <div class="col-sm-12 divpad nopad">
                     <h2 class="center textpad botpad">
                         Modifying the AM Demodulator
@@ -427,7 +427,7 @@
             </div>   
                         
             <!-- New Audio -->
-            <div class="row sback">
+            <div class="row pback">
                 <div class="col-sm-12 nopad">
                     <h2 class="center divpad textpad">
                         The Simplified Audio Amplifier
@@ -460,7 +460,7 @@
 
             <!-- PCB Design -->
             <a id="pcb"></a>
-            <div class="row pback">
+            <div class="row sback">
 
                 <div class="col-sm-4 row">
                     <div class="col nopad textdivmargin">
@@ -514,6 +514,29 @@
                     </div>
                 </div>
             </div>   
+
+            <!-- footprints -->
+            <div class="row pback">
+                <div class="col-sm-4 divpad textdivmargin">
+                    <h2 class="textpad">
+                        Designing Footprints
+                    </h2>
+
+                    <p class="justify textpad">
+                        Our volume potentiometer, audio output capacitor and SPDT switch didn't have
+                        footprints available online, so I made their footprints myself following their
+                        datasheets. In the case of the potentiometer, the datasheet didn't clearly  
+                        specify which turn direction increased the resistance between pin 2 and 3, so I included
+                        two pin 2 nets in the footprint so that I could flip the potentiometer to achieve a clockwise
+                        volume increase. Once the potentiometer arrived, we determined that the correct position
+                        for clockwise volume increase (or resistance decrease) was to use the top pin 2 position.
+                    </p>
+                </div>
+
+                <div class="col-sm-8 nopad">
+                    <img class="imgfull" src="media/design/footprints.jpg">
+                </div>
+            </div>
 
             <!-- the end of design -->
             <div class="row sback">
